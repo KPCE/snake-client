@@ -3,7 +3,7 @@ const handleUserInput = function() {
   // \u0003 maps to ctrl+c input
   
   stdin.on('data', (key) => {
-    //process.stdout.write('.');
+    process.stdout.write('.');
     if (key === '\u0003') {
       process.exit();
       }
