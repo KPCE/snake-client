@@ -16,6 +16,12 @@ const connect = function() {
     conn.write("Name: JAR")
   });
 
+  //const moveUp = setInterval(() => conn.write("Move: up"), 50);
+
+  
+  conn.on('connect', moveUp);
+
+
   conn.on('data', function(message) {
     console.log(message);
   });
